@@ -1,15 +1,15 @@
 import './App.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Selector from './components/Selector'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [madLib, setMadLib] = useState([])
+  console.log(madLib)
   return (
     <>
       <Header />
-      <Selector />
+      <Selector setMadLib={setMadLib} />
     </>
   )
 }

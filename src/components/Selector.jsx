@@ -4,16 +4,21 @@ import {
     Divider 
 } from "semantic-ui-react";
 
-function Selector(){
+function Selector({ setMadLib }){
+    function selectFortuneCookies(e) {
+        fetch(`http://localhost:3000/templates/${e.target.id}`)
+        .then(r=>r.json())
+        .then(data=>setMadLib(data))
+    }
     return(
         <Segment stacked padded='very'>
             <h2>Choose a Template</h2>
             <Segment>
-                <Button size='massive' circular primary fluid>Fortune Cookies</Button>
+                <Button id='1' size='massive' circular primary fluid onClick={selectFortuneCookies} >Fortune Cookies</Button>
                 <Divider horizontal>or</Divider>
-                <Button size='massive' circular primary fluid>Edgar Allen Poe</Button>
+                <Button id='2' size='massive' circular primary fluid onClick={selectFortuneCookies}>Edgar Allen Poe</Button>
                 <Divider horizontal>or</Divider>
-                <Button size='massive' circular primary fluid>Spider-Man</Button>
+                <Button id='3' size='massive' circular primary fluid onClick={selectFortuneCookies}>Spider-Man</Button>
             </Segment>
         </Segment>
     )

@@ -2,7 +2,7 @@
     "templates": [
         {
             "id": 1,
-            "name": "fortune-cookies",
+            "name": "Fortune Cookies",
             "blanks": ["verb-1","adj-1","adj-2","noun-1","adj-3","verbEd-1","noun-2","verbIng-1"],
             "template":"- While anyone can ${verb-1} to themselves they were ${adj-1}, the true test is admission to someone else.  - Faults are ${adj-2} where ${noun-1} is thin.  - The only real way to look ${adj-3} is not to be ${verbEd-1} so soon.   - Always try to do things in chronological ${noun-2}; it`s less ${verbIng-1} that way."
         },
