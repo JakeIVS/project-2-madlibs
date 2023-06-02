@@ -1,0 +1,12 @@
+{
+    "templates": [
+        {
+            "name": "fortune-cookies",
+            "blanks": ["verb-1","adj-1","adj-2","noun-1","adj-3","verb-ed-1","noun-2","verb-ing-1"]
+        },
+        {
+            "name": "The Raven",
+            "blanks":["adj-1","adj-2","adj-3","noun-1","noun-2","verb-ed-1","noun-3","noun-4","place-1","noun-5","adj-4","verb-ing-1","noun-6","verb-ed-2","adv-1","noun-plu-1","adj-5","adj-6","adj-7","name-f-1"]
+        }
+    ]
+}
