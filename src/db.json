@@ -1,12 +1,25 @@
 {
     "templates": [
         {
+            "id": 1,
             "name": "fortune-cookies",
-            "blanks": ["verb-1","adj-1","adj-2","noun-1","adj-3","verb-ed-1","noun-2","verb-ing-1"]
+            "blanks": ["verb-1","adj-1","adj-2","noun-1","adj-3","verbEd-1","noun-2","verbIng-1"],
+            "template":"- While anyone can ${verb-1} to themselves they were ${adj-1}, the true test is admission to someone else.  - Faults are ${adj-2} where ${noun-1} is thin.  - The only real way to look ${adj-3} is not to be ${verbEd-1} so soon.   - Always try to do things in chronological ${noun-2}; it`s less ${verbIng-1} that way."
         },
         {
+            "id": 2,
             "name": "The Raven",
-            "blanks":["adj-1","adj-2","adj-3","noun-1","noun-2","verb-ed-1","noun-3","noun-4","place-1","noun-5","adj-4","verb-ing-1","noun-6","verb-ed-2","adv-1","noun-plu-1","adj-5","adj-6","adj-7","name-f-1"]
+            "blanks":["adj-1","adj-2","adj-3","noun-1","noun-2","verbEd-1","noun-3","noun-4","place-1","noun-5","adj-4","verbIng-1","noun-6","verbEd-2","adv-1","nounPlural-1","adj-5","adj-6","adj-7","nameFemale-1"],
+            "template": "Once upon a midnight ${adj-1}, while I pondered ${adj-2} and ${adj-3}, Over many a quaint and curious ${noun-1} of forgotten ${noun-2}, While I ${verbEd-1}, nearly napping, suddenly there came a ${noun-3}, As of ${noun-4} gently rapping, rapping at my ${place-1} door. ``Tis some ${noun-5},` I muttered, `tapping at my ${place-1} door - Only this, and nothing more.` Ah, distinctly I remember it was in the ${adj-4} December, And each separate ${verbIng-1} ember wrought its ${noun-6} upon the floor. Eagerly I ${verbEd-2} the morrow; - ${adv-1} I had sought to borrow From my ${nounPlural-1} surcease of sorrow - sorrow for the ${adj-5} Lenore - For the ${adj-6} and ${adj-7} maiden whom the angels named ${nameFemale-1} - Nameless here for evermore."
+        },
+        {
+            "id": 3,
+            "name": "Spiderman",
+            "blanks": ["adj-1","noun-1","animal-1", "advLy-1", "verb-1","verbIng-1","nounPlural-1","verbEd-1","occupation-1","verb-2","occupation-2","occupation-3","adj-2","noun-2","fantasy-creature-1","noun-3","adj-3","noun-4"],
+            "template": "A rather ${adj-1} thing has just occurred in the life of nerdy high ${noun-1} student Peter Parker; after being bitten by a radioactive ${animal-1}, his body chemistry is ${advLy-1} altered in that he can ${verb-1} walls and ceilings, and he develops a '${animal-1}-sense' that warns him of ${verbIng-1} danger. Adopting the name '${animal-1}-Man', Peter first uses his newfound ${nounPlural-1} to make money, but after his uncle is ${verbEd-1} at the hands of a ${occupation-1} Peter failed to ${verb-2}, he swears to use his ${nounPlural-1} to fight the evil that ${verbEd-1} his uncle. At the same time, ${occupation-2} and ${occupation-3} Norman Osborn, after exposure to an ${adj-2} nerve ${noun-2}, develops an alternate personality himself; the super-strong, psychotic Green ${fantasy-creature-1}! Peter Parker must now juggle three things in his life; his new job at the local newspaper under a perpetually on-edge ${noun-3}, his battle against the evil Green ${fantasy-creature-1}, and his fight to win the affections of ${adj-3} classmate Mary Jane Watson, against none other than his best ${noun-4} Harry Osborn, son of Norman Osborn! Is this challenge too much for even the amazing ${animal-1}-Man to handle?"
         }
+    ],
+    "saved": [
+        {}
     ]
 }

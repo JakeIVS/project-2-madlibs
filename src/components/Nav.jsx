@@ -9,10 +9,10 @@ import {
 
 function Nav(){
     return(
-        <Segment>
+        <Segment padded="very">
             <Grid columns={2} relaxed='very' stackable>
                 <Grid.Column>
-                    <Button secondary animated='fade' >
+                    <Button secondary size="huge" animated='fade' >
                         <Button.Content visible>Begin New</Button.Content>
                         <Button.Content hidden>
                             <Icon name='angle double right'/>
@@ -20,7 +20,7 @@ function Nav(){
                     </Button>
                 </Grid.Column>
                 <Grid.Column>
-                    <Button secondary animated='fade'>
+                    <Button secondary size="huge" animated='fade'>
                         <Button.Content visible>View Saved</Button.Content>
                         <Button.Content hidden>
                             <Icon name='download' />
