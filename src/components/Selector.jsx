@@ -4,11 +4,12 @@ import {
     Divider 
 } from "semantic-ui-react";
 
-function Selector({ setMadLib }){
+function Selector({ setMadLib, setFormData }){
     function selectFormat(e) {
         fetch(`http://localhost:3000/templates/${e.target.id}`)
         .then(r=>r.json())
         .then(data=>setMadLib(data))
+        setFormData({})
     }
     return(
         <Segment stacked padded='very'>

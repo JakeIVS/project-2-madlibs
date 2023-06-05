@@ -7,12 +7,19 @@ import FinishedPrompt from './components/FinishedPrompt'
 
 function App() {
   const [madLib, setMadLib] = useState([])
-  console.log(madLib)
+  const [formData, setFormData] = useState({})
+  const [formArray, setFormArray] = useState({})
+
   return (
     <>
       <Header />
-      <Selector setMadLib={setMadLib} />
-      <MadLibForm madLib={madLib} />
+      <Selector setMadLib={setMadLib} setFormData={setFormData} />
+      <MadLibForm 
+      madLib={madLib} 
+      formData={formData} 
+      formArray={formArray}
+      setFormData={setFormData}
+      setFormArray={setFormArray} />
       <FinishedPrompt madLib={madLib}/>
     </>
   )

@@ -4,7 +4,7 @@
             "id": 1,
             "name": "Fortune Cookies",
             "blanks": ["verb-1","adj-1","adj-2","noun-1","adj-3","verbEd-1","noun-2","verbIng-1"],
-            "template":"While anyone can ${verb-1} to themselves they were ${adj-1}, the true test is admission to someone else. | Faults are ${adj-2} where ${noun-1} is thin. | The only real way to look ${adj-3} is not to be ${verbEd-1} so soon.  | Always try to do things in chronological ${noun-2}; it`s less ${verbIng-1} that way."
+            "template":["While anyone can ", ", to themselves they were",", the true test is admission to someone else. | Faults are "," where "," is thin. | The only real way to look "," is not to be "," so soon.  | Always try to do things in chronological ","; it`s less "," that way."]
         },
         {
             "id": 2,
