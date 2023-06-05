@@ -8,7 +8,7 @@ import FinishedPrompt from './components/FinishedPrompt'
 function App() {
   const [madLib, setMadLib] = useState([])
   const [formData, setFormData] = useState({})
-  const [formArray, setFormArray] = useState({})
+  const [formArray, setFormArray] = useState([])
 
   return (
     <>
@@ -20,7 +20,7 @@ function App() {
       formArray={formArray}
       setFormData={setFormData}
       setFormArray={setFormArray} />
-      <FinishedPrompt madLib={madLib}/>
+      <FinishedPrompt madLib={madLib} filledBlanks={formArray} />
     </>
   )
 }

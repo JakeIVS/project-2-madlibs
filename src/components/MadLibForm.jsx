@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Divider, Form, FormInput, Grid, Icon, Segment } from "semantic-ui-react";
+import { Button, Divider, Form, Icon, Segment } from "semantic-ui-react";
 
 function MadLibForm({ madLib, formData, setFormData, formArray, setFormArray }) {
     function handleChange(e) {
@@ -7,8 +7,12 @@ function MadLibForm({ madLib, formData, setFormData, formArray, setFormArray }) 
         const value = e.target.value;
         setFormData({...formData, [name]: value});
     }
+    function handleSubmit(e) {
+        e.preventDefault()
+        setFormArray(Object.values(formData))
 
-
+    }
+    console.log(formArray)
 // Dynamically populate the form with the necessary fields for the chosen template
 const formFields = madLib.blanks?.map(word=>{
     let wordType
@@ -26,8 +30,11 @@ const formFields = madLib.blanks?.map(word=>{
         wordType = (word.charAt(0).toUpperCase()+word.slice(1)).slice(0, word.length-2)
     }
         return (
-            <Form.Group widths={"equal"} onChange={handleChange} key={word}>
-                <Form.Input name={word} type='text' placeholder={wordType} />
+            <Form.Group widths={"equal"} onChange={handleChange} key={word} value={formData} >
+                <Form.Input 
+                name={word} 
+                type='text' 
+                placeholder={wordType} />
                 <Button icon circular >
                     <Icon name="random" />
                 </Button>
@@ -38,9 +45,12 @@ const formFields = madLib.blanks?.map(word=>{
         <Segment piled padded='very' >
             <h2>{madLib.name}</h2>
             <Divider horizontal>Fill in the words below</Divider>
+            <Segment>
                 <Form>
                     {formFields}
+                    <Button type="submit" secondary onClick={handleSubmit}>Submit</Button>
                 </Form>
+            </Segment>
         </Segment>
     )
 }
