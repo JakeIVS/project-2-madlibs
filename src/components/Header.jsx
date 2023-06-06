@@ -5,7 +5,7 @@ function Header() {
         <>
             <Segment raised >
                 <h1>MadLibs</h1>
-            <Divider horizontal>A Flatiron School Project by Jacob Ives</Divider>
+                <Divider horizontal>A Flatiron School Project by Jacob Ives</Divider>
             </Segment>
         </>
     )

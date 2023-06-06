@@ -36,9 +36,8 @@ function FinishedPrompt({ madLib, filledBlanks, onRestart }) {
         </Button>
     )
     const savedBtn = (
-        <Button color="green" icon labelPosition="right">
-            Saved
-            <Icon name="check circle" />
+        <Button positive>
+            Saved <Icon name="check circle" />
         </Button>
     )
     return(

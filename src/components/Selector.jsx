@@ -15,7 +15,7 @@ function Selector({ setMadLib, setFormData, onReturn }){
         .then(r=>r.json())
         .then(data=>setMadLib(data))
         setFormData({})
-        navigate('/form', {replace: true})
+        navigate('/selector/form', {replace: true})
     }
     return(
         <Segment stacked padded='very'>
