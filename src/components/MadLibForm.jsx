@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { Button, Divider, Form, Icon, Segment } from "semantic-ui-react";
+import { useNavigate } from "react-router-dom";
+import { Button, Container, Divider, Form, Grid, Icon, Segment } from "semantic-ui-react";
 
-function MadLibForm({ madLib, formData, setFormData, formArray, setFormArray }) {
+function MadLibForm({ madLib, formData, setFormData, setFormArray, onRestart }) {
+    const navigate = useNavigate()
     function handleChange(e) {
         const name = e.target.name;
         const value = e.target.value;
@@ -10,9 +12,12 @@ function MadLibForm({ madLib, formData, setFormData, formArray, setFormArray }) 
     function handleSubmit(e) {
         e.preventDefault()
         setFormArray(Object.values(formData))
-
+        setFormData({})
+        navigate('/final', {replace: true})
     }
-    console.log(formArray)
+    function handleBack() {
+        navigate('/selector', {replace: true})
+    }
 // Dynamically populate the form with the necessary fields for the chosen template
 const formFields = madLib.blanks?.map(word=>{
     let wordType
@@ -43,6 +48,27 @@ const formFields = madLib.blanks?.map(word=>{
     })
     return (
         <Segment piled padded='very' >
+            <Container >
+                <Grid columns={2}>
+                    <Grid.Column textAlign="left">
+                        <Button secondary animated='fade' onClick={handleBack}>
+                            <Button.Content visible>Back</Button.Content>
+                            <Button.Content hidden>
+                                <Icon name="angle left" />
+                            </Button.Content>
+                        </Button>
+                    </Grid.Column>
+                    <Grid.Column textAlign="right">                
+                        <Button secondary animated='fade' onClick={onRestart}>
+                            <Button.Content visible>Restart</Button.Content>
+                            <Button.Content hidden>
+                                <Icon name="undo" />
+                            </Button.Content>
+                        </Button>
+                    </Grid.Column>
+                </Grid>
+
+            </Container>
             <h2>{madLib.name}</h2>
             <Divider horizontal>Fill in the words below</Divider>
             <Segment>

@@ -1,6 +1,6 @@
-import { Container, Segment } from "semantic-ui-react"
+import { Button, Container, Divider, Segment } from "semantic-ui-react"
 
-function FinishedPrompt({ madLib, filledBlanks }) { 
+function FinishedPrompt({ madLib, filledBlanks, onRestart }) { 
     let story
     if (!!madLib.template && filledBlanks !== []) {
         let template = madLib.template
@@ -15,9 +15,11 @@ function FinishedPrompt({ madLib, filledBlanks }) {
     return(
         <Segment piled >
             <Container text>
-                <h2>{madLib.name}</h2>
+                <h2>{!!madLib.name ? madLib.name : 'Loading...'}</h2>
                 <p>{!!madLib.template && filledBlanks !==[] ? story : 'Loading...'}</p>
             </Container>
+            <Divider/>
+            <Button primary fluid circular onClick={onRestart}>Start Over</Button>
         </Segment>
     )
 }

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { 
     Segment,
     Divider,
@@ -6,13 +5,18 @@ import {
     Button,
     Icon
 } from "semantic-ui-react";
+import { useNavigate } from "react-router-dom";
 
 function Nav(){
+    const navigate = useNavigate()
+    function handleBegin() {
+        navigate("/selector", {replace: true})
+    }
     return(
         <Segment padded="very">
-            <Grid columns={2} relaxed='very' stackable>
+            <Grid columns={2} relaxed='very'>
                 <Grid.Column>
-                    <Button secondary size="huge" animated='fade' >
+                    <Button secondary size="huge" animated='fade' onClick={handleBegin} >
                         <Button.Content visible>Begin New</Button.Content>
                         <Button.Content hidden>
                             <Icon name='angle double right'/>

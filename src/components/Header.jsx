@@ -1,4 +1,3 @@
-import Nav from "./Nav"
 import { Segment, Divider } from "semantic-ui-react"
 
 function Header() {
@@ -7,7 +6,6 @@ function Header() {
             <Segment raised >
                 <h1>MadLibs</h1>
             <Divider horizontal>A Flatiron School Project by Jacob Ives</Divider>
-            <Nav />
             </Segment>
         </>
     )
