@@ -1,25 +1,148 @@
 {
-    "templates": [
-        {
-            "id": 1,
-            "name": "Fortune Cookies",
-            "blanks": ["verb-1","adj-1","adj-2","noun-1","adj-3","verbEd-1","noun-2","verbIng-1"],
-            "template":["While anyone can ", ", to themselves they were ",", the true test is admission to someone else. | Faults are "," where "," is thin. | The only real way to look "," is not to be "," so soon.  | Always try to do things in chronological ","; it`s less "," that way."]
-        },
-        {
-            "id": 2,
-            "name": "The Raven",
-            "blanks":["adj-1","adj-2","adj-3","noun-1","noun-2","verbEd-1","noun-3","noun-4","place-1","noun-5","adj-4","verbIng-1","noun-6","verbEd-2","adv-1","nounPlural-1","adj-5","adj-6","adj-7","nameFemale-1"],
-            "template": ["Once upon a midnight ", ", while I pondered "," and ",", Over many a quaint and curious "," of forgotten ",", While I ",", nearly napping, suddenly there came a ",", As of "," gently rapping, rapping at my "," door. ``Tis some ",",` I muttered, `tapping at my "," door - Only this, and nothing more.` Ah, distinctly I remember it was in the "," December, And each separate "," ember wrought its "," upon the floor. Eagerly I "," the morrow; - "," I had sought to borrow From my "," surcease of sorrow - sorrow for the "," Lenore - For the "," and "," maiden whom the angels named "," - Nameless here for evermore."]
-        },
-        {
-            "id": 3,
-            "name": "Spiderman",
-            "blanks": ["adj-1","noun-1","animal-1", "advLy-1", "verb-1","animal-2","verbIng-1","animal-3","nounPlural-1","verbEd-1","occupation-1","verb-2","nounPlural-2","verbEd-2","occupation-2","occupation-3","adj-2","noun-2","fantasy-creature-1","noun-3","fantasy-creature-2","adj-3","noun-4","animal-4"],
-            "template": ["A rather "," thing has just occurred in the life of nerdy high "," student Peter Parker; after being bitten by a radioactive ",", his body chemistry is "," altered in that he can "," walls and ceilings, and he develops a '","-sense' that warns him of "," danger. Adopting the name '","-Man', Peter first uses his newfound "," to make money, but after his uncle is "," at the hands of a "," Peter failed to ",", he swears to use his "," to fight the evil that "," his uncle. At the same time, "," and "," Norman Osborn, after exposure to an "," nerve ",", develops an alternate personality himself; the super-strong, psychotic Green ","! Peter Parker must now juggle three things in his life; his new job at the local newspaper under a perpetually on-edge ",", his battle against the evil Green ",", and his fight to win the affections of "," classmate Mary Jane Watson, against none other than his best "," Harry Osborn, son of Norman Osborn! Is this challenge too much for even the amazing ","-Man to handle?"]
-        }
-    ],
-    "saved": [
-        {}
-    ]
+  "templates": [
+    {
+      "id": 1,
+      "name": "Fortune Cookies",
+      "blanks": [
+        "verb-1",
+        "adj-1",
+        "adj-2",
+        "noun-1",
+        "adj-3",
+        "verbEd-1",
+        "noun-2",
+        "verbIng-1"
+      ],
+      "template": [
+        "While anyone can ",
+        ", to themselves they were ",
+        ", the true test is admission to someone else. | Faults are ",
+        " where ",
+        " is thin. | The only real way to look ",
+        " is not to be ",
+        " so soon.  | Always try to do things in chronological ",
+        "; it`s less ",
+        " that way."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "The Raven",
+      "blanks": [
+        "adj-1",
+        "adj-2",
+        "adj-3",
+        "noun-1",
+        "noun-2",
+        "verbEd-1",
+        "noun-3",
+        "noun-4",
+        "place-1",
+        "noun-5",
+        "adj-4",
+        "verbIng-1",
+        "noun-6",
+        "verbEd-2",
+        "adv-1",
+        "nounPlural-1",
+        "adj-5",
+        "adj-6",
+        "adj-7",
+        "nameFemale-1"
+      ],
+      "template": [
+        "Once upon a midnight ",
+        ", while I pondered ",
+        " and ",
+        ", Over many a quaint and curious ",
+        " of forgotten ",
+        ", While I ",
+        ", nearly napping, suddenly there came a ",
+        ", As of ",
+        " gently rapping, rapping at my ",
+        " door. ``Tis some ",
+        ",` I muttered, `tapping at my ",
+        " door - Only this, and nothing more.` Ah, distinctly I remember it was in the ",
+        " December, And each separate ",
+        " ember wrought its ",
+        " upon the floor. Eagerly I ",
+        " the morrow; - ",
+        " I had sought to borrow From my ",
+        " surcease of sorrow - sorrow for the ",
+        " Lenore - For the ",
+        " and ",
+        " maiden whom the angels named ",
+        " - Nameless here for evermore."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Spiderman",
+      "blanks": [
+        "adj-1",
+        "noun-1",
+        "animal-1",
+        "advLy-1",
+        "verb-1",
+        "animal-2",
+        "verbIng-1",
+        "animal-3",
+        "nounPlural-1",
+        "verbEd-1",
+        "occupation-1",
+        "verb-2",
+        "nounPlural-2",
+        "verbEd-2",
+        "occupation-2",
+        "occupation-3",
+        "adj-2",
+        "noun-2",
+        "fantasy-creature-1",
+        "noun-3",
+        "fantasy-creature-2",
+        "adj-3",
+        "noun-4",
+        "animal-4"
+      ],
+      "template": [
+        "A rather ",
+        " thing has just occurred in the life of nerdy high ",
+        " student Peter Parker; after being bitten by a radioactive ",
+        ", his body chemistry is ",
+        " altered in that he can ",
+        " walls and ceilings, and he develops a '",
+        "-sense' that warns him of ",
+        " danger. Adopting the name '",
+        "-Man', Peter first uses his newfound ",
+        " to make money, but after his uncle is ",
+        " at the hands of a ",
+        " Peter failed to ",
+        ", he swears to use his ",
+        " to fight the evil that ",
+        " his uncle. At the same time, ",
+        " and ",
+        " Norman Osborn, after exposure to an ",
+        " nerve ",
+        ", develops an alternate personality himself; the super-strong, psychotic Green ",
+        "! Peter Parker must now juggle three things in his life; his new job at the local newspaper under a perpetually on-edge ",
+        ", his battle against the evil Green ",
+        ", and his fight to win the affections of ",
+        " classmate Mary Jane Watson, against none other than his best ",
+        " Harry Osborn, son of Norman Osborn! Is this challenge too much for even the amazing ",
+        "-Man to handle?"
+      ]
+    }
+  ],
+  "saved": [
+    {
+      "id": 1,
+      "name": "Test",
+      "story": "This is a test"
+    },
+    {
+      "name": "Fortune Cookies",
+      "story": "While anyone can test, to themselves they were test, the true test is admission to someone else. | Faults are test where test is thin. | The only real way to look test is not to be test so soon.  | Always try to do things in chronological test; it`s less test that way.",
+      "id": 2
+    }
+  ]
 }
