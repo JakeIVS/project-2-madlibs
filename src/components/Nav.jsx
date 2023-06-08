@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 function Nav({ setList }){
     const navigate = useNavigate()
+    // make a function for each button that routes to the desired component
     function handleBegin() {
         navigate("/selector", {replace: true})
     }
@@ -19,6 +20,7 @@ function Nav({ setList }){
         navigate('/saved', {replace: true})
     }
     return(
+        // Use grid rows to space the buttons out better
         <Grid columns={1} textAlign="center">
             <Grid.Row stretched></Grid.Row>
             <Grid.Row stretched></Grid.Row>

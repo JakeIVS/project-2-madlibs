@@ -98,6 +98,7 @@ function NewTemplateForm() {
             value === 'end' ? setBlanks({...blanks, [blankName]: value}):setBlanks({...blanks, [blankName]: value, [nextBlankName]: "end"});
             setStorySegments({...storySegments, [nextSegmentName]: ""})
         }
+        // Return a form text input and a dropdown menu 
         return(
             <Form.Group key={count} widths="equal">
                 <Form.Input type="text" 

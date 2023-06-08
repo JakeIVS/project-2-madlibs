@@ -1,8 +1,8 @@
 import { Item, List } from "semantic-ui-react"
 
 function StoryListItem({ item, onPreview }) {
+    // Use the beginning of the story string to create a preview
     const storyPreview = item.story.slice(0,40)+'...'
-    console.log(storyPreview)
     return(
         <List.Item onClick={()=>onPreview(item.id)}>
             <List.Icon name="chevron circle right" />

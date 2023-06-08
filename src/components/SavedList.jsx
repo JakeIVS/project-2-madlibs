@@ -3,11 +3,11 @@ import { Button, Container,  Grid, Header, List, Placeholder, Segment } from "se
 import StoryListItem from "./StoryListItem";
 
 function SavedList({ list, onRestart }) {
-    const [preview, setPreview] = useState({})
+    const [story, setStory] = useState({})
     function handlePreview(id) {
         fetch(`http://localhost:3000/saved/${id}`)
         .then(r=>r.json())
-        .then(data=>setPreview(data))
+        .then(data=>setStory(data))
     }
     let listStories = list?.map(item=>{
         return <StoryListItem item={item} key={item.id} onPreview={handlePreview}/>
@@ -25,7 +25,8 @@ function SavedList({ list, onRestart }) {
             </Grid.Column>
             <Grid.Column width={9}>
                 <Segment piled>
-                    {!preview.id ? 
+                    {/* If no story is selected, show a placeholder paragraph in the story window */}
+                    {!story.id ? 
                     <Placeholder>
                         <Placeholder.Header as="h2">
                         </Placeholder.Header>
@@ -40,8 +41,8 @@ function SavedList({ list, onRestart }) {
                     </Placeholder>
                  : 
                     <Container fluid text>
-                        <Header as="h2">{preview.name}</Header>
-                        <p>{preview.story}</p>
+                        <Header as="h2">{story.name}</Header>
+                        <p>{story.story}</p>
                     </Container> }
                 </Segment>
             </Grid.Column>
