@@ -16,14 +16,27 @@ function Selector({ setMadLib, setFormData, onReturn }){
     // initial fetch of template data
     useEffect(()=>{
         fetch('http://localhost:3000/templates')
+        .then(r=>r.json())
+        .then(data=>setTemplates(data))
     },[])
-
+    console.log(templates)
+    const buttonField = templates.map(template=>{
+        return(
+            <>
+            {template.id === 1 ? null: <Divider horizontal>or</Divider> }
+            <Button id={template.id} key={template.id} size='massive' circular primary fluid onClick={selectFormat} >{template.name}</Button>
+            </>
+        )
+    })
     function selectFormat(e) {
         fetch(`http://localhost:3000/templates/${e.target.id}`)
         .then(r=>r.json())
         .then(data=>setMadLib(data))
         setFormData({})
         navigate('/selector/form', {replace: true})
+    }
+    function handleNew() {
+        navigate("/createnew", {replace: true})
     }
     return(
         <Segment stacked padded='very'>
@@ -40,7 +53,7 @@ function Selector({ setMadLib, setFormData, onReturn }){
                     <Header as="h1">Select Template</Header>
                 </Grid.Column>
                 <Grid.Column textAlign="right">
-                    <Button secondary animated="fade">
+                    <Button secondary animated="fade" onClick={handleNew}>
                         <Button.Content visible>New Template</Button.Content>
                         <Button.Content hidden>
                             <Icon name="file text" />
@@ -49,11 +62,7 @@ function Selector({ setMadLib, setFormData, onReturn }){
                 </Grid.Column>
             </Grid>
             <Divider/>
-                <Button id='1' size='massive' circular primary fluid onClick={selectFormat} >Fortune Cookies</Button>
-                <Divider horizontal>or</Divider>
-                <Button id='2' size='massive' circular primary fluid onClick={selectFormat}>Edgar Allen Poe</Button>
-                <Divider horizontal>or</Divider>
-                <Button id='3' size='massive' circular primary fluid onClick={selectFormat}>Spider-Man</Button>
+            {buttonField}
         </Segment>
     )
 }

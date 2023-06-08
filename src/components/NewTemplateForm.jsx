@@ -57,18 +57,18 @@ function NewTemplateForm() {
         console.log(neededBlanks.length, neededBlanks)
         console.log(segmentArray.length, segmentArray)
         console.log(formattedSegments.length, formattedSegments)
-        // fetch("http://localhost:3000/templates", {
-        //     method: "POST",
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //         'accepts': 'application/json'
-        //     },
-        //     body: JSON.stringify({
-        //         "name": storyName,
-        //         "blanks": neededBlanks,
-        //         "template": segmentArray
-        //     })
-        // })
+        fetch("http://localhost:3000/templates", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'accepts': 'application/json'
+            },
+            body: JSON.stringify({
+                "name": storyName,
+                "blanks": neededBlanks,
+                "template": formattedSegments
+            })
+        })
         setStoryName('')
         setBlanks({blank1: 'end'})
         setStorySegments({seg1: ''})
@@ -138,7 +138,7 @@ function NewTemplateForm() {
     })
     return(
         <Segment piled>
-                <Button size="small" fluid animated="vertical">
+                <Button size="small" fluid animated="vertical" onClick={handleReturn}>
                     <Button.Content visible >Return</Button.Content>
                     <Button.Content hidden>
                         <Icon name="reply" />

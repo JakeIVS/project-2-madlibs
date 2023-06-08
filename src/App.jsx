@@ -17,6 +17,7 @@ function App() {
   const [list, setList] = useState([])
   //set a navigate variable to switch routes
   const navigate = useNavigate()
+  console.log(madLib)
 
   function handleRestart() { //clears out all states and returns to starting page
     setFormArray([])
@@ -41,8 +42,8 @@ function App() {
         onRestart={handleRestart} />} />
         <Route path='selector/final' element={<FinishedPrompt madLib={madLib} filledBlanks={formArray} onRestart={handleRestart} />} />
         <Route path='/saved' element={<SavedList list={list} onRestart={handleRestart}/>} />
+        <Route path='/createnew' element={<NewTemplateForm />} />
       </Routes>
-      <NewTemplateForm />
     </>
   )
 }

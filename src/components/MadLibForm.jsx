@@ -13,7 +13,7 @@ function MadLibForm({ madLib, formData, setFormData, setFormArray, onRestart }) 
         e.preventDefault()
         setFormArray(Object.values(formData))
         setFormData({})
-        navigate('selector/final', {replace: true})
+        navigate('/selector/final', {replace: true})
     }
     function handleBack() {
         navigate('/selector', {replace: true})
