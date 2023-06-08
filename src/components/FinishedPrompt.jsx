@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Button, Container, Divider, Grid, Segment, Icon } from "semantic-ui-react"
+import { Button, Container, Divider, Grid, Segment, Icon, Placeholder } from "semantic-ui-react"
 
 function FinishedPrompt({ madLib, filledBlanks, onRestart }) { 
     const [saved, setSaved] = useState(false)
@@ -55,9 +55,24 @@ function FinishedPrompt({ madLib, filledBlanks, onRestart }) {
                     {saved ? savedBtn : unSavedBtn}
                 </Grid.Column>
             </Grid>
-            <Container text>
-                <h2>{!!madLib.name ? madLib.name : 'Loading...'}</h2>
-                <p>{!!madLib.template && filledBlanks !==[] ? story : 'Loading...'}</p>
+            <Container text textAlign="center">
+                <h2>{!!madLib.name ? madLib.name : "Loading Story"}</h2>
+                <p>{!!madLib.template && filledBlanks !==[] ? story : 
+                <Placeholder fluid>
+                    <Placeholder.Line/>
+                    <Placeholder.Line/>
+                    <Placeholder.Line/>
+                    <Placeholder.Line/>
+                    <Placeholder.Line/>
+                    <Placeholder.Line/>
+                    <Placeholder.Line/>
+                    <Placeholder.Line/>
+                    <Placeholder.Line/>
+                    <Placeholder.Line/>
+                    <Placeholder.Line/>
+                    <Placeholder.Line/>
+                    <Placeholder.Line/>
+                </Placeholder>}</p>
             </Container>
             <Divider/>
         </Segment>
