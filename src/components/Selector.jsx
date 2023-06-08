@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { 
     Segment,
@@ -10,6 +11,13 @@ import {
 
 function Selector({ setMadLib, setFormData, onReturn }){
     const navigate = useNavigate()
+    const [templates, setTemplates] = useState([])
+
+    // initial fetch of template data
+    useEffect(()=>{
+        fetch('http://localhost:3000/templates')
+    },[])
+
     function selectFormat(e) {
         fetch(`http://localhost:3000/templates/${e.target.id}`)
         .then(r=>r.json())

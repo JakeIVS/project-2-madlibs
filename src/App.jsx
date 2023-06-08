@@ -6,6 +6,7 @@ import Selector from './components/Selector'
 import MadLibForm from './components/MadLibForm'
 import FinishedPrompt from './components/FinishedPrompt'
 import SavedList from './components/SavedList'
+import NewTemplateForm from './components/NewTemplateForm'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path='selector/final' element={<FinishedPrompt madLib={madLib} filledBlanks={formArray} onRestart={handleRestart} />} />
         <Route path='/saved' element={<SavedList list={list} onRestart={handleRestart}/>} />
       </Routes>
+      <NewTemplateForm />
     </>
   )
 }

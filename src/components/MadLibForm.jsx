@@ -27,7 +27,7 @@ const formFields = madLib.blanks?.map(word=>{
         wordType = 'Verb ending in -ing'
     } else if (word.slice(0, word.length-2) === 'nounPlural') {
         wordType = 'Plural Noun'
-    } else if (word.slice(0, word.length-2) === 'advLy') {
+    } else if (word.slice(0, word.length-2) === 'adverbLy') {
         wordType = 'Adverb ending in -ly'
     } else if (word.slice(0, word.length-2) === 'adj') {
         wordType = 'Adjective'

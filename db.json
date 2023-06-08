@@ -43,12 +43,12 @@
         "verbIng-1",
         "noun-6",
         "verbEd-2",
-        "adv-1",
+        "adverb-1",
         "nounPlural-1",
         "adj-5",
         "adj-6",
         "adj-7",
-        "nameFemale-1"
+        "name-1"
       ],
       "template": [
         "Once upon a midnight ",
@@ -82,7 +82,7 @@
         "adj-1",
         "noun-1",
         "animal-1",
-        "advLy-1",
+        "adverbLy-1",
         "verb-1",
         "animal-2",
         "verbIng-1",
