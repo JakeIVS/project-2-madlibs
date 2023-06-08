@@ -7,6 +7,7 @@ import MadLibForm from './components/MadLibForm'
 import FinishedPrompt from './components/FinishedPrompt'
 import SavedList from './components/SavedList'
 import NewTemplateForm from './components/NewTemplateForm'
+import Submitted from './components/Submitted'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 
 function App() {
@@ -17,7 +18,6 @@ function App() {
   const [list, setList] = useState([])
   //set a navigate variable to switch routes
   const navigate = useNavigate()
-  console.log(madLib)
 
   function handleRestart() { //clears out all states and returns to starting page
     setFormArray([])
@@ -30,7 +30,8 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
+      {/* Add routes for all components, such that only one component at a time will appear below the header */}
+      <Routes> 
         <Route path="/" element={<Nav setList={setList}/>} />
         <Route path="/selector"  element={<Selector setMadLib={setMadLib} setFormData={setFormData} onReturn={handleRestart} />} />
         <Route path='selector/form' element={<MadLibForm 
@@ -43,6 +44,7 @@ function App() {
         <Route path='selector/final' element={<FinishedPrompt madLib={madLib} filledBlanks={formArray} onRestart={handleRestart} />} />
         <Route path='/saved' element={<SavedList list={list} onRestart={handleRestart}/>} />
         <Route path='/createnew' element={<NewTemplateForm />} />
+        <Route path='/createnew/success' element={<Submitted />} />
       </Routes>
     </>
   )

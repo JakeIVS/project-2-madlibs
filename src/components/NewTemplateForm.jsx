@@ -10,24 +10,8 @@ function NewTemplateForm() {
     const [blanks, setBlanks] = useState({blank1: 'end'})
     const blankArray = Object.values(blanks)
     const segmentArray = Object.values(storySegments)
-    const [submitted, setSubmitted] = useState(false)
-    // create a splash screen that shows up when a template is submitted
-    const submittedScreen = (
-        <Container>
-            <Header color="grey" as="h1">Submitted!</Header>
-            <Icon name="check circle outline" color="green" size="massive"/>
-            <Divider />
-            <Button size="massive" animated="vertical">
-                <Button.Content visible >Return</Button.Content>
-                <Button.Content hidden>
-                    <Icon name="reply" />
-                </Button.Content>
-            </Button>
-        </Container>
-    )
-
+    // return to template selector
     function handleReturn() {
-        setSubmitted(false)
         navigate('/selector', {replace: true})
     }
     
@@ -53,10 +37,7 @@ function NewTemplateForm() {
             }
             return seg
         })
-        console.log(storyName)
-        console.log(neededBlanks.length, neededBlanks)
-        console.log(segmentArray.length, segmentArray)
-        console.log(formattedSegments.length, formattedSegments)
+        // post template data to the templates database
         fetch("http://localhost:3000/templates", {
             method: "POST",
             headers: {
@@ -69,10 +50,12 @@ function NewTemplateForm() {
                 "template": formattedSegments
             })
         })
+        //return the form and all states to original states
         setStoryName('')
         setBlanks({blank1: 'end'})
         setStorySegments({seg1: ''})
-        setSubmitted(true)
+        //navigate to the success splash screen
+        navigate('/createnew/success')
     }
     //reset forms when clear button is clicked
     function handleClear(e){
@@ -81,7 +64,6 @@ function NewTemplateForm() {
         setStorySegments({seg1: ''})
     }
 
-    console.log(blankArray)
     //create a form input to for each new story segment and blank word.
     //when form is updated with a new blank word, it should then create
     //new form fields for the next part of the story 
@@ -105,17 +87,15 @@ function NewTemplateForm() {
         ]
 
         //set form change functions for story field and blank menu for each generated field group
+        // make form inputs controlled components
         function handleStoryChange(e) {
             let story = e.target.value
             setStorySegments({...storySegments, [segmentName]: story})
         }
         function handleDropdownChange(value) {
-            setBlanks({...blanks, [blankName]: value})
-        }
-        function handleNext() {
             let nextBlankName = "blank"+nextCount
             let nextSegmentName = "seg"+nextCount
-            setBlanks({...blanks, [nextBlankName]: "end"})
+            value === 'end' ? setBlanks({...blanks, [blankName]: value}):setBlanks({...blanks, [blankName]: value, [nextBlankName]: "end"});
             setStorySegments({...storySegments, [nextSegmentName]: ""})
         }
         return(
@@ -132,7 +112,6 @@ function NewTemplateForm() {
                 value={ value }
                 closeOnChange 
                 onChange={(e, { value })=>handleDropdownChange(value)} />
-                <Button type="button" onClick={handleNext}>Next</Button>
             </Form.Group>
         )
     })

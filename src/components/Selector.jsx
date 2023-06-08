@@ -10,6 +10,7 @@ import {
 } from "semantic-ui-react";
 
 function Selector({ setMadLib, setFormData, onReturn }){
+    // set needed states and navigate constant
     const navigate = useNavigate()
     const [templates, setTemplates] = useState([])
 
@@ -19,7 +20,7 @@ function Selector({ setMadLib, setFormData, onReturn }){
         .then(r=>r.json())
         .then(data=>setTemplates(data))
     },[])
-    console.log(templates)
+    //populate container with buttons to select which template to use
     const buttonField = templates.map(template=>{
         return(
             <>
@@ -28,6 +29,8 @@ function Selector({ setMadLib, setFormData, onReturn }){
             </>
         )
     })
+    // sets the madlib state to the data from whichever template was selected
+    // also clears out formData incase anything was left over in the state from last use
     function selectFormat(e) {
         fetch(`http://localhost:3000/templates/${e.target.id}`)
         .then(r=>r.json())
@@ -35,6 +38,7 @@ function Selector({ setMadLib, setFormData, onReturn }){
         setFormData({})
         navigate('/selector/form', {replace: true})
     }
+    // navigates to the form to create a new template
     function handleNew() {
         navigate("/createnew", {replace: true})
     }
