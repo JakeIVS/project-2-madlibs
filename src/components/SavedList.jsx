@@ -27,18 +27,20 @@ function SavedList({ list, onRestart }) {
                 <Segment piled>
                     {/* If no story is selected, show a placeholder paragraph in the story window */}
                     {!story.id ? 
-                    <Placeholder>
-                        <Placeholder.Header as="h2">
-                        </Placeholder.Header>
-                        <Placeholder.Paragraph>
-                            <Placeholder.Line />
-                            <Placeholder.Line />
-                            <Placeholder.Line />
-                            <Placeholder.Line />
-                            <Placeholder.Line />
-                            <Placeholder.Line />
-                        </Placeholder.Paragraph>
-                    </Placeholder>
+                    <Segment loading>
+                        <Placeholder>
+                            <Placeholder.Header as="h2">
+                            </Placeholder.Header>
+                            <Placeholder.Paragraph>
+                                <Placeholder.Line />
+                                <Placeholder.Line />
+                                <Placeholder.Line />
+                                <Placeholder.Line />
+                                <Placeholder.Line />
+                                <Placeholder.Line />
+                            </Placeholder.Paragraph>
+                        </Placeholder>
+                    </Segment>
                  : 
                     <Container fluid text>
                         <Header as="h2">{story.name}</Header>

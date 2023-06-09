@@ -129,7 +129,7 @@ function NewTemplateForm() {
                 <Divider horizontal>Create your own MadLibs Story</Divider>
                 <Form>
                     <Form.Input label="Name" type="text" size="massive" placeholder="Enter a name for your new story..." value={storyName} onChange={handleNameChange} />
-                    <Divider horizontal>Write your story here</Divider>
+                    <Divider horizontal>story here</Divider>
                     {formFields}
                     <Button.Group>
                         <Button secondary type="reset" onClick={handleClear}>Clear</Button>
