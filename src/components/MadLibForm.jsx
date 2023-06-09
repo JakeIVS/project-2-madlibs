@@ -74,7 +74,6 @@ const formFields = madLib.blanks?.map(word=>{
                         </Button>
                     </Grid.Column>
                 </Grid>
-
             </Container>
             <h2>{madLib.name}</h2>
             <Divider horizontal>Fill in the words below</Divider>

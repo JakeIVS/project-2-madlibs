@@ -131,6 +131,17 @@
         " Harry Osborn, son of Norman Osborn! Is this challenge too much for even the amazing ",
         "-Man to handle?"
       ]
+    },
+    {
+      "name": "Test",
+      "blanks": [
+        "adj-1"
+      ],
+      "template": [
+        " This is a ",
+        " test! "
+      ],
+      "id": 4
     }
   ],
   "saved": [
@@ -143,6 +154,11 @@
       "name": "Fortune Cookies",
       "story": "While anyone can test, to themselves they were test, the true test is admission to someone else. | Faults are test where test is thin. | The only real way to look test is not to be test so soon.  | Always try to do things in chronological test; it`s less test that way.",
       "id": 2
+    },
+    {
+      "name": "Test",
+      "story": " This is a fun test! ",
+      "id": 3
     }
   ]
 }

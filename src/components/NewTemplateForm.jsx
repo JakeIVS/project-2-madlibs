@@ -14,7 +14,6 @@ function NewTemplateForm() {
     function handleReturn() {
         navigate('/selector', {replace: true})
     }
-    
     //set story name using form data
     function handleNameChange(e) {
         setStoryName(e.target.value)
@@ -63,7 +62,6 @@ function NewTemplateForm() {
         setBlanks({blank1: "end"})
         setStorySegments({seg1: ''})
     }
-
     //create a form input to for each new story segment and blank word.
     //when form is updated with a new blank word, it should then create
     //new form fields for the next part of the story 
@@ -85,7 +83,6 @@ function NewTemplateForm() {
             {key:"adverbLy", value:`adverbLy-${count}`, text: 'Adverb ending in -ly'},
             {key:"name", value:`name-${count}`, text: 'Name'}
         ]
-
         //set form change functions for story field and blank menu for each generated field group
         // make form inputs controlled components
         function handleStoryChange(e) {
